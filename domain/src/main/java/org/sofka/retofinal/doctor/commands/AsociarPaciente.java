@@ -1,4 +1,4 @@
 package org.sofka.retofinal.doctor.commands;
 
-public class AsignarEnfermeraCommand {
+public class AsociarPaciente {
 }

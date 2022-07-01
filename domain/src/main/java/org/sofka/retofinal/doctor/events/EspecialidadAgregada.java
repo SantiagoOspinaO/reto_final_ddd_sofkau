@@ -14,4 +14,12 @@ public class EspecialidadAgregada extends DomainEvent {
         this.especialidadId = especialidadId;
         this.descripcion = descripcion;
     }
+
+    public EspecialidadId especialidadId() {
+        return especialidadId;
+    }
+
+    public Descripcion descripcion() {
+        return descripcion;
+    }
 }

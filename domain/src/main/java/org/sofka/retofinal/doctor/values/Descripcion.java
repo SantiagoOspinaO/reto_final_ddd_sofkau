@@ -4,25 +4,16 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class Descripcion implements ValueObject<Descripcion.Props> {
+public class Descripcion implements ValueObject<String> {
 
-    private final String valor;
+    private final String descripcion;
 
-    public Descripcion(String valor) {
-        this.valor = Objects.requireNonNull(valor, "El valor no puede ser null");
+    public Descripcion(String descripcion) {
+        this.descripcion = Objects.requireNonNull(descripcion, "La descripcion no puede ser null");
     }
 
     @Override
-    public Props value() {
-        return new Props() {
-            @Override
-            public String valor() {
-                return null;
-            }
-        };
-    }
-
-    public interface Props {
-        String valor();
+    public String value() {
+        return descripcion;
     }
 }

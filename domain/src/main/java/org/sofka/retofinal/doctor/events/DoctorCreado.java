@@ -1,32 +1,43 @@
 package org.sofka.retofinal.doctor.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import org.sofka.retofinal.doctor.values.EnfermeraId;
-import org.sofka.retofinal.doctor.values.EspecialidadId;
-import org.sofka.retofinal.doctor.values.TarjetaProfesionalId;
+import org.sofka.retofinal.doctor.values.*;
 
 public class DoctorCreado extends DomainEvent {
 
-    private final EnfermeraId enfermeraId;
-    private final TarjetaProfesionalId tarjetaProfesionalId;
+    private final InformacionPersonal informacionPersonal;
+    private final ProcedimientoId procedimientoId;
+    private final Informacion informacion;
+    private final Nota nota;
     private final EspecialidadId especialidadId;
 
-    public DoctorCreado(EnfermeraId enfermeraId, TarjetaProfesionalId tarjetaProfesionalId, EspecialidadId especialidadId) {
+    public DoctorCreado(InformacionPersonal informacionPersonal, ProcedimientoId procedimientoId, Informacion informacion, Nota nota, EspecialidadId especialidadId) {
         super("org.sofka.retofinal.DoctorCreado");
-        this.enfermeraId = enfermeraId;
-        this.tarjetaProfesionalId = tarjetaProfesionalId;
+        this.informacionPersonal = informacionPersonal;
+        this.procedimientoId = procedimientoId;
+        this.informacion = informacion;
+        this.nota = nota;
         this.especialidadId = especialidadId;
     }
 
-    public EnfermeraId getEnfermeraId() {
-        return enfermeraId;
+
+    public InformacionPersonal informacionPersonal() {
+        return informacionPersonal;
     }
 
-    public TarjetaProfesionalId getTarjetaProfesionalId() {
-        return tarjetaProfesionalId;
+    public ProcedimientoId procedimientoId() {
+        return procedimientoId;
     }
 
-    public EspecialidadId getEspecialidadId() {
+    public Informacion informacion() {
+        return informacion;
+    }
+
+    public Nota nota() {
+        return nota;
+    }
+
+    public EspecialidadId especialidadId() {
         return especialidadId;
     }
 }

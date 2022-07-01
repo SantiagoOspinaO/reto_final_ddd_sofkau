@@ -11,4 +11,8 @@ public class QuirofanoAsociado extends DomainEvent {
         super("org.sofka.retofinal.QuirofanoAsociado");
         this.quirofanoId = quirofanoId;
     }
+
+    public QuirofanoId quirofanoId() {
+        return quirofanoId;
+    }
 }

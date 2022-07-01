@@ -11,4 +11,8 @@ public class PacienteAsociado extends DomainEvent {
         super("org.sofka.retofinal.PacienteAsociado");
         this.pacienteId = pacienteId;
     }
+
+    public PacienteId pacienteId() {
+        return pacienteId;
+    }
 }
