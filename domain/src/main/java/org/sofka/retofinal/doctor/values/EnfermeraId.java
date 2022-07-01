@@ -4,15 +4,15 @@ import co.com.sofka.domain.generic.Identity;
 
 public class EnfermeraId extends Identity {
 
-    private EnfermeraId(String value) {
-        super(value);
+    private EnfermeraId(String id) {
+        super(id);
     }
 
     public EnfermeraId() {
 
     }
 
-    public static EnfermeraId of(String value) {
-        return new EnfermeraId(value);
+    public static EnfermeraId of(String id) {
+        return new EnfermeraId(id);
     }
 }

@@ -7,19 +7,21 @@ public class DoctorCreado extends DomainEvent {
 
     private final InformacionPersonal informacionPersonal;
     private final ProcedimientoId procedimientoId;
-    private final Informacion informacion;
-    private final Nota nota;
+    private final Descripcion descripcion;
+    private final Calificacion calificacion;
     private final EspecialidadId especialidadId;
+    private final EnfermeraId enfermeraId;
 
-    public DoctorCreado(InformacionPersonal informacionPersonal, ProcedimientoId procedimientoId, Informacion informacion, Nota nota, EspecialidadId especialidadId) {
+    public DoctorCreado(InformacionPersonal informacionPersonal, ProcedimientoId procedimientoId,
+                        Descripcion descripcion, Calificacion calificacion, EspecialidadId especialidadId, EnfermeraId enfermeraId) {
         super("org.sofka.retofinal.DoctorCreado");
         this.informacionPersonal = informacionPersonal;
         this.procedimientoId = procedimientoId;
-        this.informacion = informacion;
-        this.nota = nota;
+        this.descripcion = descripcion;
+        this.calificacion = calificacion;
         this.especialidadId = especialidadId;
+        this.enfermeraId = enfermeraId;
     }
-
 
     public InformacionPersonal informacionPersonal() {
         return informacionPersonal;
@@ -29,15 +31,19 @@ public class DoctorCreado extends DomainEvent {
         return procedimientoId;
     }
 
-    public Informacion informacion() {
-        return informacion;
+    public Descripcion descripcion() {
+        return descripcion;
     }
 
-    public Nota nota() {
-        return nota;
+    public Calificacion calificacion() {
+        return calificacion;
     }
 
     public EspecialidadId especialidadId() {
         return especialidadId;
+    }
+
+    public EnfermeraId enfermeraId() {
+        return enfermeraId;
     }
 }

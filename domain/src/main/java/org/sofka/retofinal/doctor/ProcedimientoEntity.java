@@ -1,18 +1,29 @@
 package org.sofka.retofinal.doctor;
 
 import co.com.sofka.domain.generic.Entity;
-import org.sofka.retofinal.doctor.values.Informacion;
-import org.sofka.retofinal.doctor.values.Nota;
+import org.sofka.retofinal.doctor.values.Descripcion;
+import org.sofka.retofinal.doctor.values.Calificacion;
 import org.sofka.retofinal.doctor.values.ProcedimientoId;
+
+import java.util.Objects;
 
 public class ProcedimientoEntity extends Entity<ProcedimientoId> {
 
-    private Informacion informacion;
-    private Nota nota;
+    private Descripcion descripcion;
 
-    public ProcedimientoEntity(ProcedimientoId procedimientoId, Informacion informacion, Nota nota) {
+    private Calificacion calificacion;
+
+    public ProcedimientoEntity(ProcedimientoId procedimientoId, Descripcion descripcion, Calificacion calificacion) {
         super(procedimientoId);
-        this.informacion = informacion;
-        this.nota = nota;
+        this.descripcion = descripcion;
+        this.calificacion = calificacion;
+    }
+
+    public void actualizarDescripcion(Descripcion descripcion) {
+        this.descripcion = Objects.requireNonNull(descripcion);
+    }
+
+    public void actualizarCalificacion(Calificacion calificacion) {
+        this.calificacion = Objects.requireNonNull(calificacion);
     }
 }

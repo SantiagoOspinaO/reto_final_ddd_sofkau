@@ -15,7 +15,7 @@ public class EspecialidadEntity extends Entity<EspecialidadId> {
         this.descripcion = descripcion;
     }
 
-    public void agregarEspecialidad(Descripcion descripcion) {
+    public void actualizarDescripcion(Descripcion descripcion) {
         this.descripcion = Objects.requireNonNull(descripcion);
     }
 }

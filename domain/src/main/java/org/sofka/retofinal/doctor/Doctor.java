@@ -1,11 +1,14 @@
 package org.sofka.retofinal.doctor;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import org.sofka.retofinal.doctor.events.*;
 import org.sofka.retofinal.doctor.values.*;
 import org.sofka.retofinal.paciente.values.PacienteId;
 import org.sofka.retofinal.quirofano.values.QuirofanoId;
 
+import javax.print.Doc;
+import java.util.List;
 import java.util.Objects;
 
 public class Doctor extends AggregateEvent<DoctorId> {
@@ -13,12 +16,25 @@ public class Doctor extends AggregateEvent<DoctorId> {
     protected ProcedimientoEntity procedimiento;
     protected EspecialidadEntity especialidad;
     protected EnfermeraEntity enfermera;
+    protected PacienteId pacienteId;
+    protected QuirofanoId quirofanoId;
 
     public Doctor(DoctorId doctorId, InformacionPersonal informacionPersonal, ProcedimientoId procedimientoId,
-                  Informacion informacion, Nota nota, EspecialidadId especialidadId) {
+                  Descripcion descripcion, Calificacion calificacion, EspecialidadId especialidadId, EnfermeraId enfermeraId) {
         super(doctorId);
-        appendChange(new DoctorCreado(informacionPersonal, procedimientoId, informacion, nota, especialidadId)).apply();
+        appendChange(new DoctorCreado(informacionPersonal, procedimientoId, descripcion, calificacion, especialidadId, enfermeraId)).apply();
         subscribe(new DoctorEventChange(this));
+    }
+
+    private Doctor(DoctorId doctorId) {
+        super(doctorId);
+        subscribe(new DoctorEventChange(this));
+    }
+
+    public static Doctor from(DoctorId doctorId, List<DomainEvent> events) {
+        var doctor = new Doctor(doctorId);
+        events.forEach(doctor::applyEvent);
+        return doctor;
     }
 
     public void agregarEnfermera(EnfermeraId enfermeraId, InformacionPersonal informacionPersonal) {
@@ -33,13 +49,15 @@ public class Doctor extends AggregateEvent<DoctorId> {
         appendChange(new EspecialidadAgregada(especialidadId, descripcion)).apply();
     }
 
-    public void asociarQuirofano(QuirofanoId quirofanoId) {
+    public void asociarQuirofano(QuirofanoId quirofanoId, DoctorId doctorId) {
         Objects.requireNonNull(quirofanoId);
-        appendChange(new QuirofanoAsociado(quirofanoId)).apply();
+        Objects.requireNonNull(doctorId);
+        appendChange(new QuirofanoAsociado(quirofanoId, doctorId)).apply();
     }
 
-    public void asociarPaciente(PacienteId pacienteId) {
+    public void asociarPaciente(PacienteId pacienteId, DoctorId doctorId) {
         Objects.requireNonNull(pacienteId);
-        appendChange(new PacienteAsociado(pacienteId)).apply();
+        Objects.requireNonNull(doctorId);
+        appendChange(new PacienteAsociado(pacienteId, doctorId)).apply();
     }
 }
