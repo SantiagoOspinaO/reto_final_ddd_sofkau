@@ -16,8 +16,8 @@ public class Doctor extends AggregateEvent<DoctorId> {
     protected ProcedimientoEntity procedimiento;
     protected EspecialidadEntity especialidad;
     protected EnfermeraEntity enfermera;
-    protected PacienteId pacienteId;
     protected QuirofanoId quirofanoId;
+    protected PacienteId pacienteId;
 
     public Doctor(DoctorId doctorId, InformacionPersonal informacionPersonal, ProcedimientoId procedimientoId,
                   Descripcion descripcion, Calificacion calificacion, EspecialidadId especialidadId, EnfermeraId enfermeraId) {
