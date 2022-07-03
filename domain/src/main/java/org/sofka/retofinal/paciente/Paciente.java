@@ -2,8 +2,10 @@ package org.sofka.retofinal.paciente;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import org.sofka.retofinal.doctor.values.DoctorId;
 import org.sofka.retofinal.doctor.values.InformacionPersonal;
+import org.sofka.retofinal.paciente.entities.AcompanianteEntity;
+import org.sofka.retofinal.paciente.entities.HabitacionEntity;
+import org.sofka.retofinal.paciente.entities.HistoriaClinicaEntity;
 import org.sofka.retofinal.paciente.events.*;
 import org.sofka.retofinal.paciente.values.*;
 import org.sofka.retofinal.quirofano.values.QuirofanoId;

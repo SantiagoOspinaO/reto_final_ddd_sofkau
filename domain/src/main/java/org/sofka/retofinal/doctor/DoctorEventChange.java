@@ -1,6 +1,9 @@
 package org.sofka.retofinal.doctor;
 
 import co.com.sofka.domain.generic.EventChange;
+import org.sofka.retofinal.doctor.entities.EnfermeraEntity;
+import org.sofka.retofinal.doctor.entities.EspecialidadEntity;
+import org.sofka.retofinal.doctor.entities.ProcedimientoEntity;
 import org.sofka.retofinal.doctor.events.*;
 
 public class DoctorEventChange extends EventChange {

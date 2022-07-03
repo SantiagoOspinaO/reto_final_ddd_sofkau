@@ -1,6 +1,9 @@
 package org.sofka.retofinal.paciente;
 
 import co.com.sofka.domain.generic.EventChange;
+import org.sofka.retofinal.paciente.entities.AcompanianteEntity;
+import org.sofka.retofinal.paciente.entities.HabitacionEntity;
+import org.sofka.retofinal.paciente.entities.HistoriaClinicaEntity;
 import org.sofka.retofinal.paciente.events.*;
 
 public class PacienteEventChange extends EventChange {

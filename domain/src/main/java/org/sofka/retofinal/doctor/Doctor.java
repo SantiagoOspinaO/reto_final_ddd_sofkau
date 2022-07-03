@@ -2,12 +2,14 @@ package org.sofka.retofinal.doctor;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import org.sofka.retofinal.doctor.entities.EnfermeraEntity;
+import org.sofka.retofinal.doctor.entities.EspecialidadEntity;
+import org.sofka.retofinal.doctor.entities.ProcedimientoEntity;
 import org.sofka.retofinal.doctor.events.*;
 import org.sofka.retofinal.doctor.values.*;
 import org.sofka.retofinal.paciente.values.PacienteId;
 import org.sofka.retofinal.quirofano.values.QuirofanoId;
 
-import javax.print.Doc;
 import java.util.List;
 import java.util.Objects;
 

@@ -1,7 +1,6 @@
 package org.sofka.retofinal.doctor.values;
 
 import co.com.sofka.domain.generic.Identity;
-import org.sofka.retofinal.doctor.ProcedimientoEntity;
 
 public class ProcedimientoId extends Identity {
 

@@ -1,7 +1,7 @@
 package org.sofka.retofinal.doctor.commands;
 
 import co.com.sofka.domain.generic.Command;
-import org.sofka.retofinal.doctor.EspecialidadEntity;
+import org.sofka.retofinal.doctor.entities.EspecialidadEntity;
 import org.sofka.retofinal.doctor.values.*;
 
 public class CrearDoctorCommand extends Command {
