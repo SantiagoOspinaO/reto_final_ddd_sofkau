@@ -8,19 +8,16 @@ public class CrearDoctorCommand extends Command {
 
     private final DoctorId doctorId;
     private final InformacionPersonal informacionPersonal;
-    private final EspecialidadEntity especialidad;
     private final ProcedimientoId procedimientoId;
     private final Descripcion descripcion;
     private final Calificacion calificacion;
     private final EspecialidadId especialidadId;
     private final EnfermeraId enfermeraId;
 
-    public CrearDoctorCommand(DoctorId doctorId, InformacionPersonal informacionPersonal, EspecialidadEntity especialidad,
-                              ProcedimientoId procedimientoId, Descripcion descripcion, Calificacion calificacion,
-                              EspecialidadId especialidadId, EnfermeraId enfermeraId) {
+    public CrearDoctorCommand(DoctorId doctorId, InformacionPersonal informacionPersonal, ProcedimientoId procedimientoId,
+                              Descripcion descripcion, Calificacion calificacion, EspecialidadId especialidadId, EnfermeraId enfermeraId) {
         this.doctorId = doctorId;
         this.informacionPersonal = informacionPersonal;
-        this.especialidad = especialidad;
         this.procedimientoId = procedimientoId;
         this.descripcion = descripcion;
         this.calificacion = calificacion;
@@ -32,31 +29,27 @@ public class CrearDoctorCommand extends Command {
         return doctorId;
     }
 
-    public InformacionPersonal getInformacionPersonal() {
+    public InformacionPersonal informacionPersonal() {
         return informacionPersonal;
     }
 
-    public EspecialidadEntity getEspecialidad() {
-        return especialidad;
-    }
-
-    public ProcedimientoId getProcedimientoId() {
+    public ProcedimientoId procedimientoId() {
         return procedimientoId;
     }
 
-    public Descripcion getDescripcion() {
+    public Descripcion descripcion() {
         return descripcion;
     }
 
-    public Calificacion getCalificacion() {
+    public Calificacion calificacion() {
         return calificacion;
     }
 
-    public EspecialidadId getEspecialidadId() {
+    public EspecialidadId especialidadId() {
         return especialidadId;
     }
 
-    public EnfermeraId getEnfermeraId() {
+    public EnfermeraId enfermeraId() {
         return enfermeraId;
     }
 }

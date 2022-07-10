@@ -1,7 +1,6 @@
 package org.sofka.retofinal.quirofano.values;
 
 import co.com.sofka.domain.generic.Identity;
-import org.sofka.retofinal.quirofano.MedicamentoEntity;
 
 public class MedicamentoId extends Identity {
 

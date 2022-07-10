@@ -26,7 +26,6 @@ public class Paciente extends AggregateEvent<PacienteId> {
         subscribe(new PacienteEventChange(this));
     }
 
-
     private Paciente(PacienteId pacienteId) {
         super(pacienteId);
         subscribe(new PacienteEventChange(this));
