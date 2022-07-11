@@ -25,7 +25,7 @@ public class CrearDoctorCommand extends Command {
         this.enfermeraId = enfermeraId;
     }
 
-    public DoctorId getDoctorId() {
+    public DoctorId doctorId() {
         return doctorId;
     }
 

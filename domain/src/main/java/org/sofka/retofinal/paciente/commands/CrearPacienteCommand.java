@@ -26,35 +26,35 @@ public class CrearPacienteCommand extends Command {
         this.acompanianteId = acompanianteId;
     }
 
-    public PacienteId getPacienteId() {
+    public PacienteId pacienteId() {
         return pacienteId;
     }
 
-    public InformacionPersonal getInformacionPersonal() {
+    public InformacionPersonal informacionPersonal() {
         return informacionPersonal;
     }
 
-    public HistoriaClinicaId getHistoriaClinicaId() {
+    public HistoriaClinicaId historiaClinicaId() {
         return historiaClinicaId;
     }
 
-    public Diagnostico getDiagnostico() {
+    public Diagnostico diagnostico() {
         return diagnostico;
     }
 
-    public HabitacionId getHabitacionId() {
+    public HabitacionId habitacionId() {
         return habitacionId;
     }
 
-    public Numero getNumero() {
+    public Numero numero() {
         return numero;
     }
 
-    public Ubicacion getUbicacion() {
+    public Ubicacion ubicacion() {
         return ubicacion;
     }
 
-    public AcompanianteId getAcompanianteId() {
+    public AcompanianteId acompanianteId() {
         return acompanianteId;
     }
 }

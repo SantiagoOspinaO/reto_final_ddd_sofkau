@@ -14,11 +14,11 @@ public class AsociarQuirofanoCommand extends Command {
         this.pacienteId = pacienteId;
     }
 
-    public QuirofanoId getQuirofanoId() {
+    public QuirofanoId quirofanoId() {
         return quirofanoId;
     }
 
-    public PacienteId getPacienteId() {
+    public PacienteId pacienteId() {
         return pacienteId;
     }
 }

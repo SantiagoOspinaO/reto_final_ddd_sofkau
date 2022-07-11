@@ -20,19 +20,19 @@ public class AsociarHabitacionCommand extends Command {
         this.ubicacion = ubicacion;
     }
 
-    public HabitacionId getHabitacionId() {
+    public HabitacionId habitacionId() {
         return habitacionId;
     }
 
-    public PacienteId getPacienteId() {
+    public PacienteId pacienteId() {
         return pacienteId;
     }
 
-    public Numero getNumero() {
+    public Numero numero() {
         return numero;
     }
 
-    public Ubicacion getUbicacion() {
+    public Ubicacion ubicacion() {
         return ubicacion;
     }
 }

@@ -17,15 +17,15 @@ public class AgregarEspecialidadCommand extends Command {
         this.descripcion = descripcion;
     }
 
-    public DoctorId getDoctorId() {
+    public DoctorId doctorId() {
         return doctorId;
     }
 
-    public EspecialidadId getEspecialidadId() {
+    public EspecialidadId especialidadId() {
         return especialidadId;
     }
 
-    public Descripcion getDescripcion() {
+    public Descripcion descripcion() {
         return descripcion;
     }
 }

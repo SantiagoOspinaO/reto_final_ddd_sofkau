@@ -14,11 +14,11 @@ public class AsignarAnestesiologoCommand extends Command {
         this.anestesiologoId = anestesiologoId;
     }
 
-    public QuirofanoId getQuirofanoId() {
+    public QuirofanoId quirofanoId() {
         return quirofanoId;
     }
 
-    public AnestesiologoId getAnestesiologoId() {
+    public AnestesiologoId anestesiologoId() {
         return anestesiologoId;
     }
 }

@@ -17,15 +17,15 @@ public class CrearHistoriaClinicaCommand extends Command {
         this.diagnostico = diagnostico;
     }
 
-    public HistoriaClinicaId getHistoriaClinicaId() {
+    public HistoriaClinicaId historiaClinicaId() {
         return historiaClinicaId;
     }
 
-    public PacienteId getPacienteId() {
+    public PacienteId pacienteId() {
         return pacienteId;
     }
 
-    public Diagnostico getDiagnostico() {
+    public Diagnostico diagnostico() {
         return diagnostico;
     }
 }

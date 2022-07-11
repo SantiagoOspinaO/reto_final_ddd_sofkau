@@ -17,15 +17,15 @@ public class AgregarEnfermeraCommand extends Command {
         this.informacionPersonal = informacionPersonal;
     }
 
-    public DoctorId getDoctorId() {
+    public DoctorId doctorId() {
         return doctorId;
     }
 
-    public EnfermeraId getEnfermeraId() {
+    public EnfermeraId enfermeraId() {
         return enfermeraId;
     }
 
-    public InformacionPersonal getInformacionPersonal() {
+    public InformacionPersonal informacionPersonal() {
         return informacionPersonal;
     }
 }

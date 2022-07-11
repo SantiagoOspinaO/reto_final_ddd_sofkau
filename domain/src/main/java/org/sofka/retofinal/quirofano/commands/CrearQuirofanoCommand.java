@@ -22,27 +22,27 @@ public class CrearQuirofanoCommand extends Command {
         this.informacionPersonal = informacionPersonal;
     }
 
-    public QuirofanoId getQuirofanoId() {
+    public QuirofanoId quirofanoId() {
         return quirofanoId;
     }
 
-    public TipoCirugia getTipoCirugia() {
+    public TipoCirugia tipoCirugia() {
         return tipoCirugia;
     }
 
-    public Duracion getDuracion() {
+    public Duracion duracion() {
         return duracion;
     }
 
-    public Fecha getFecha() {
+    public Fecha fecha() {
         return fecha;
     }
 
-    public AnestesiologoId getAnestesiologoId() {
+    public AnestesiologoId anestesiologoId() {
         return anestesiologoId;
     }
 
-    public InformacionPersonal getInformacionPersonal() {
+    public InformacionPersonal informacionPersonal() {
         return informacionPersonal;
     }
 }

@@ -17,15 +17,15 @@ public class AsignarInstrumentoQuirurgicoCommand extends Command {
         this.nombre = nombre;
     }
 
-    public QuirofanoId getQuirofanoId() {
+    public QuirofanoId quirofanoId() {
         return quirofanoId;
     }
 
-    public InstrumentoQuirurgicoId getInstrumentoQuirurgicoId() {
+    public InstrumentoQuirurgicoId instrumentoQuirurgicoId() {
         return instrumentoQuirurgicoId;
     }
 
-    public Nombre getNombre() {
+    public Nombre nombre() {
         return nombre;
     }
 }

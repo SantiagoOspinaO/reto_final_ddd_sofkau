@@ -14,11 +14,11 @@ public class AsociarPacienteCommand extends Command {
         this.doctorId = doctorId;
     }
 
-    public PacienteId getPacienteId() {
+    public PacienteId pacienteId() {
         return pacienteId;
     }
 
-    public DoctorId getDoctorId() {
+    public DoctorId doctorId() {
         return doctorId;
     }
 }
